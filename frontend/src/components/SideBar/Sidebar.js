@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Link } from 'react-router-dom';
 
 import { Container } from './styles';
 
@@ -24,7 +25,7 @@ export default class SideBar extends Component {
                         <NavIcon>
                             <i style={{ fontSize: '1.75em' }} />
                         </NavIcon>
-                        <NavText>Dashboard</NavText>
+                        <NavText><BrowserRouter><Link to='dashboard'>Dashboard</Link></BrowserRouter></NavText>
                     </NavItem>
                     <NavItem eventKey="sprints">
                         <NavIcon>
