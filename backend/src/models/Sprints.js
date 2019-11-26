@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const SprintSchema = new mongoose.Schema({
     name: String,
-    begin: Date,
+    begin: String,
     duration: String
 });
 

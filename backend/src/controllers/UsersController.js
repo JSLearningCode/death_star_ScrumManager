@@ -1,6 +1,6 @@
 const User =  require('../models/Users');
 
-async function create(req,res) {
+async function store(req,res) {
     try {
         const user = await User.create(req.body);
 
@@ -12,4 +12,10 @@ async function create(req,res) {
     }
 };
 
-module.exports = {create};
+async function show(req, res) {
+    const { us } = req.headers;
+    const users = await User.find({ us });
+    return res.json(users);
+}
+
+module.exports = {store, show};
