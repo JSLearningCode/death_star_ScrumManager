@@ -7,7 +7,7 @@ const ProjectsController = require('./controllers/ProjectsController');
 
 routes = express.Router();
 
-//get do dashboard
+// CRUD do backend por rotas
 
 //READ
 
@@ -19,8 +19,6 @@ routes.get('/sprintshow', SprintsController.show);
 
 routes.get('/usershow', UsersController.show);
 
-// CRUD de usuarios, post de sprints, post de projetos
-
 // CREATE
 
 routes.post('/userscreate', UsersController.store);
@@ -29,18 +27,20 @@ routes.post('/sprintscreate', SprintsController.store);
 
 routes.post('/projectscreate', ProjectsController.store);
 
-// UPDATES
+// UPDATE
 
 routes.post('/projectupdate', ProjectsController.update);
 
-// routes.post('/sprintupdate', SprintsController.update);
+routes.post('/sprintupdate', SprintsController.update);
 
-// routes.post('/userupdate', UsersController.update);
+routes.post('/userupdate', UsersController.update);
+
+// DELETE
 
 routes.post('/projectdelete', ProjectsController.delete);
 
-// routes.post('/sprintdelete', SprintsController.delete);
+routes.post('/sprintdelete', SprintsController.delete);
 
-// routes.post('/userdelete', UsersController.delete);
+routes.post('/userdelete', UsersController.deleted);
 
 module.exports = routes;

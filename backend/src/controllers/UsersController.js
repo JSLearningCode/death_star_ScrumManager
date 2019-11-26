@@ -18,4 +18,29 @@ async function show(req, res) {
     return res.json(users);
 }
 
-module.exports = {store, show};
+async function update(req, res) {
+    try {
+        const id = req.body.id;
+        const update = {
+            name: req.body.name
+        }
+        await User.updateOne(id, update);
+        return res.status(200).send('UPDATED');
+    }
+    catch(err) {
+        return res.status(400).send({ error: 'failed to update user' });
+    }
+}
+
+async function deleted(req,res) {
+    try {
+        const id = req.body.id;
+        await User.deleteOne(id);
+        return res.status(200).send('DELETED');
+    }
+    catch(err) {
+        return res.status(400).send({ error: 'failed to delete user' });
+    }
+}
+
+module.exports = {store, show, update, deleted };
