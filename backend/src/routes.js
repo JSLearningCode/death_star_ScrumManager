@@ -1,6 +1,7 @@
 const express = require('express');
 
 const DashboardController = require('./controllers/DashboardController');
+const UsersController = require('./controllers/UsersController');
 
 routes = express.Router();
 
@@ -10,7 +11,7 @@ routes.get('/dashboard', DashboardController.show);
 
 // CRUD de usuarios, post de sprints, post de projetos
 
-//routes.post('/userscreate', UsersController.create);
+routes.post('/userscreate', UsersController.create);
 
 //routes.post('/sprintscreate', SprintsController.create);
 

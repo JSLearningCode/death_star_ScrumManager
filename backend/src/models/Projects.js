@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 const ProjectSchema = new mongoose.Schema({
     name: String,
-    owner: String,
+    productOwner: String,
+    scrumMaster: String,
     team: String
 });
 
