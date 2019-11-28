@@ -31,7 +31,7 @@ export default class SideBar extends Component {
                         <NavIcon>
                             <i style={{ fontSize: '1.75em' }} />
                         </NavIcon>
-                        <NavText>Projects</NavText>
+                        <NavText><BrowserRouter><Link to='projects'>Projects</Link></BrowserRouter></NavText>
                     </NavItem>
                     <NavItem eventKey="sprints">
                         <NavIcon>
@@ -39,23 +39,23 @@ export default class SideBar extends Component {
                         </NavIcon>
                         <NavText>Sprints</NavText>
                         <NavItem eventKey="productBacklog">
-                            <NavText>Product Backlog</NavText>
+                            <NavText><BrowserRouter><Link to='productbacklog'>Product Backlog</Link></BrowserRouter></NavText>
                         </NavItem>
                         <NavItem eventKey="sprintList">
-                            <NavText>Sprint List</NavText>
+                            <NavText><BrowserRouter><Link to='sprint'>Sprint List</Link></BrowserRouter></NavText>
                         </NavItem>
                     </NavItem>
                     <NavItem eventKey="kanban">
                         <NavIcon>
                             <i style={{ fontSize: '1.75em' }} />
                         </NavIcon>
-                        <NavText>Kanban Board</NavText>
+                        <NavText><BrowserRouter><Link to='kanban'>Kanban Board</Link></BrowserRouter></NavText>
                     </NavItem>
                     <NavItem eventKey="issues">
                         <NavIcon>
                             <i style={{ fontSize: '1.75em' }} />
                         </NavIcon>
-                        <NavText>Issues</NavText>
+                        <NavText><BrowserRouter><Link to='sprint'>Issues</Link></BrowserRouter></NavText>
                     </NavItem>
                 </SideNav.Nav>
             </SideNav>    
