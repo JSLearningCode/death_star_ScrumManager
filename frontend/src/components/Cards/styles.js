@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 20%;
+    min-width: 200px;
     left: 10%;
     top: 5%;
     position: relative;
@@ -9,13 +10,14 @@ export const Container = styled.div`
     display: inline-block;
 
     h2 {
-        margin-top: -50px;
+        margin-top: -30px;
     }
 
     Button {
         position: relative;
         margin: 5px;
         width: 45%;
+        min-width: 150px;
     }
 
     div {
