@@ -7,6 +7,7 @@ export default class SprintList extends Component {
     return (
     <Container>
 
-    </Container>);
+    </Container>
+    );
   }
 }
