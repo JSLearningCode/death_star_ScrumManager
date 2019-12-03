@@ -15,8 +15,10 @@ export default class ProductBacklog extends Component {
         <ProductDescription />
         <ProductFunctionalities />
         <ProductAttachments />
-        <Button color='warning'>EDIT</Button>
-        <Button color='success'>SAVE</Button>
+        <div id='btn-prod'>
+          <Button color='warning'>EDIT</Button>
+          <Button color='success'>SAVE</Button>
+        </div>
       </Container>
     );
   }
